@@ -1,4 +1,5 @@
 import re
+from '../../../../utils' import read_file_lines
 
 
 def build_stacks(input):
@@ -36,11 +37,14 @@ def top_crates(moves, stacks):
     output = ''
     for stack in stacks:
         output += stack[-1]
-    
+
     return output
 
+
 f = open('2022/days/05/parts/01/input.txt', 'r')
-lines = f.readlines()
+
+
+lines = read_file_lines f.readlines()
 stacks = build_stacks(lines)
 r = top_crates(lines, stacks)
 
