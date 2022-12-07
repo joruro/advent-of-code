@@ -1,3 +1,10 @@
+import sys
+import os
+sys.path.insert(0, os.path.abspath("src"))
+from utils.api import get_input  # noqa: E402
+
+input = get_input(2022, 6)
+
 def find_start_of_packet(input, distinct_chars=14):
     l = 0
     m = set()
@@ -13,8 +20,7 @@ def find_start_of_packet(input, distinct_chars=14):
             return o
 
 
-f = open('src/2022/days/06/input.txt', 'r')
-lines = f.readlines()
-r = find_start_of_packet(lines[0].strip(), 4)
-
-print(r)
+part_one = find_start_of_packet(input, 4)
+part_two = find_start_of_packet(input, 14)
+print(part_one)
+print(part_two)
