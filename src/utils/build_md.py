@@ -14,7 +14,7 @@ content = []
 for year in years:
     content.append(f"* {parse(year)}")
     solutions = filter(lambda x: ".py" in x and "init" not in x, os.listdir(f"src/years/{year}"))
-    content += [f"    {i+1}. {parse(f'{solution}', f'{year}/')}" for i, solution in enumerate(sorted(solutions))]
+    content += [f"    *{parse(f'{solution}', f'{year}/')}" for _, solution in enumerate(sorted(solutions))]
 
 readme_content = "# Advent of Code\n\n"
 readme_content += "## Usage\n\n## Problems list:\n"
