@@ -12,5 +12,6 @@
     * [06](https://github.com/joruro/advent-of-code/blob/main/src/years/2022/06.py)
     * [07](https://github.com/joruro/advent-of-code/blob/main/src/years/2022/07.py)
     * [08](https://github.com/joruro/advent-of-code/blob/main/src/years/2022/08.py)
+    * [09](https://github.com/joruro/advent-of-code/blob/main/src/years/2022/09.py)
 
 Inspired by: [advent-of-code-setup](https://github.com/tomfran/advent-of-code-setup)
