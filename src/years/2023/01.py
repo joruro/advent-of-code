@@ -29,7 +29,6 @@ def get_number(str):
 
 def get_first_and_last_digits(line):
     start, end = 0, len(line) - 1
-    tens_str, ones_str = deque([]), deque([]) 
     tens_found, ones_found = False, False
     while not tens_found or not ones_found:
         if not tens_found:
@@ -58,63 +57,11 @@ def get_first_and_last_digits(line):
             ones_found = True
             ones = line[end]
         
-
-    #     print(tens_str,ones_str)
-    #     if not tens_found:
-    #         tens = line[start] 
-        
-    #     if not ones_found:
-    #         ones = line[end]
-
-    #     if tens.isnumeric():
-    #         tens_found = True
-
-    #     if ones.isnumeric():
-    #         ones_found = True
-
-
-    #     tens_str.append(tens)
-    #     ones_str.append(ones)
-
-    #     if not tens_found:
-    #         if len(tens_str) >= 3 and len(tens_str) <= 5:
-    #             number = get_number(''.join(tens_str))
-    #             if number is not False:
-    #                 tens_found = True
-    #                 tens = number
-            
-    #         if len(tens_str) > 5:
-    #             while len(tens_str) > 3:
-    #                 tens_str.popleft()
-    #                 number = get_number(''.join(tens_str))
-    #                 if number is not False:
-    #                     tens_found = True
-    #                     tens = number
-    #                     break
-        
-    #     if not ones_found:
-    #         if len(ones_str) >= 3 and len(ones_str) <= 5:
-    #             number = get_number(''.join(reversed(ones_str)))
-    #             if number is not False:
-    #                 ones_found = True
-    #                 ones = number
-            
-    #         if len(ones_str) > 5:
-    #             while len(ones_str) > 3:
-    #                 ones_str.popleft()
-    #                 number = get_number(''.join(reversed(ones_str)))
-    #                 if number is not False:
-    #                     ones_found = True
-    #                     ones = number
-    #                     break
-            
         if not tens_found:
             start += 1
         if not ones_found:
             end -= 1
     
-    print(int(tens + ones))
-
     return int(tens + ones)
 
 
